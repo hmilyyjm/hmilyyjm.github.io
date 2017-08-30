@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>不错的zsh配置 | 三水的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="#color{{{ 		autoload colors 		colors   	for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do 	eval _$color=&apos;%{$terminfo[bold]$fg[${(L)color}]%}&apos; 	eval $color=&apos;%{$fg[${(L)color}]%}&apos; 	(( count =">
-<meta name="keywords" content="---shell ---zsh">
+  <meta name="description" content="zsh的配置在网上发现的zsh的配置，记录下来">
+<meta name="keywords" content="-shell -zsh">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不错的zsh配置">
 <meta property="og:url" content="http://yoursite.com/2017/08/30/不错的zsh配置/index.html">
 <meta property="og:site_name" content="三水的博客">
-<meta property="og:description" content="#color{{{ 		autoload colors 		colors   	for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do 	eval _$color=&apos;%{$terminfo[bold]$fg[${(L)color}]%}&apos; 	eval $color=&apos;%{$fg[${(L)color}]%}&apos; 	(( count =">
+<meta property="og:description" content="zsh的配置在网上发现的zsh的配置，记录下来">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-08-30T10:00:11.000Z">
+<meta property="og:updated_time" content="2017-08-30T10:07:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不错的zsh配置">
-<meta name="twitter:description" content="#color{{{ 		autoload colors 		colors   	for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do 	eval _$color=&apos;%{$terminfo[bold]$fg[${(L)color}]%}&apos; 	eval $color=&apos;%{$fg[${(L)color}]%}&apos; 	(( count =">
+<meta name="twitter:description" content="zsh的配置在网上发现的zsh的配置，记录下来">
   
     <link rel="alternative" href="/atom.xml" title="三水的博客" type="application/atom+xml">
   
@@ -170,337 +170,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>   #color{{{
-		autoload colors
-		colors
- 
-	for color in RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; do
-	eval _$color='%{$terminfo[bold]$fg[${(L)color}]%}'
-	eval $color='%{$fg[${(L)color}]%}'
-	(( count = $count + 1 ))
-	done
-	FINISH="%{$terminfo[sgr0]%}"
-	#}}}
+        <h2 id="zsh的配置"><a href="#zsh的配置" class="headerlink" title="zsh的配置"></a>zsh的配置</h2><p>在网上发现的zsh的配置，记录下来</p>
+<a id="more"></a> 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div><div class="line">293</div><div class="line">294</div><div class="line">295</div><div class="line">296</div><div class="line">297</div><div class="line">298</div><div class="line">299</div><div class="line">300</div><div class="line">301</div><div class="line">302</div><div class="line">303</div><div class="line">304</div><div class="line">305</div><div class="line">306</div><div class="line">307</div><div class="line">308</div><div class="line">309</div><div class="line">310</div><div class="line">311</div><div class="line">312</div><div class="line">313</div><div class="line">314</div><div class="line">315</div><div class="line">316</div><div class="line">317</div><div class="line">318</div><div class="line">319</div><div class="line">320</div><div class="line">321</div><div class="line">322</div><div class="line">323</div><div class="line">324</div><div class="line">325</div><div class="line">326</div><div class="line">327</div><div class="line">328</div></pre></td><td class="code"><pre><div class="line">  <span class="comment">#color&#123;&#123;&#123;</span></div><div class="line">	<span class="built_in">autoload</span> colors</div><div class="line">	colors</div><div class="line"></div><div class="line"><span class="keyword">for</span> color <span class="keyword">in</span> RED GREEN YELLOW BLUE MAGENTA CYAN WHITE; <span class="keyword">do</span></div><div class="line"><span class="built_in">eval</span> _<span class="variable">$color</span>=<span class="string">'%&#123;$terminfo[bold]$fg[$&#123;(L)color&#125;]%&#125;'</span></div><div class="line"><span class="built_in">eval</span> <span class="variable">$color</span>=<span class="string">'%&#123;$fg[$&#123;(L)color&#125;]%&#125;'</span></div><div class="line">(( count = <span class="variable">$count</span> + 1 ))</div><div class="line"><span class="keyword">done</span></div><div class="line">FINISH=<span class="string">"%&#123;<span class="variable">$terminfo</span>[sgr0]%&#125;"</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line">	</div><div class="line"><span class="comment">#命令提示符</span></div><div class="line">RPROMPT=$(<span class="built_in">echo</span> <span class="string">"<span class="variable">$RED</span>%D %T<span class="variable">$FINISH</span>"</span>)</div><div class="line">PROMPT=$(<span class="built_in">echo</span> <span class="string">"<span class="variable">$CYAN</span>%n@<span class="variable">$YELLOW</span>%M:<span class="variable">$GREEN</span>%/<span class="variable">$_YELLOW</span>&gt;<span class="variable">$FINISH</span> "</span>)</div><div class="line"></div><div class="line"><span class="comment">#PROMPT=$(echo "$BLUE%M$GREEN%/</span></div><div class="line"><span class="comment">#$CYAN%n@$BLUE%M:$GREEN%/$_YELLOW&gt;&gt;&gt;$FINISH ")</span></div><div class="line"><span class="comment">#标题栏、任务栏样式&#123;&#123;&#123;</span></div><div class="line"><span class="keyword">case</span> <span class="variable">$TERM</span> <span class="keyword">in</span> (*xterm*|*rxvt*|(dt|k|E)term)</div><div class="line"><span class="function"><span class="title">precmd</span></span> () &#123; <span class="built_in">print</span> -Pn <span class="string">"\e]0;%n@%M//%/\a"</span> &#125;</div><div class="line"><span class="function"><span class="title">preexec</span></span> () &#123; <span class="built_in">print</span> -Pn <span class="string">"\e]0;%n@%M//%/\ <span class="variable">$1</span>\a"</span> &#125;</div><div class="line">;;</div><div class="line"><span class="keyword">esac</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"></div><div class="line"><span class="comment">#编辑器</span></div><div class="line"><span class="built_in">export</span> EDITOR=vim</div><div class="line"><span class="comment">#输入法</span></div><div class="line"><span class="built_in">export</span> XMODIFIERS=<span class="string">"@im=ibus"</span></div><div class="line"><span class="built_in">export</span> QT_MODULE=ibus</div><div class="line"><span class="built_in">export</span> GTK_MODULE=ibus</div><div class="line"><span class="comment">#关于历史纪录的配置 &#123;&#123;&#123;</span></div><div class="line"><span class="comment">#历史纪录条目数量</span></div><div class="line"><span class="built_in">export</span> HISTSIZE=10000</div><div class="line"><span class="comment">#注销后保存的历史纪录条目数量</span></div><div class="line"><span class="built_in">export</span> SAVEHIST=10000</div><div class="line"><span class="comment">#历史纪录文件</span></div><div class="line">   <span class="built_in">export</span> HISTFILE=~/.zhistory</div><div class="line"><span class="comment">#以附加的方式写入历史纪录</span></div><div class="line"><span class="built_in">setopt</span> INC_APPEND_HISTORY</div><div class="line"><span class="comment">#如果连续输入的命令相同，历史纪录中只保留一个</span></div><div class="line"><span class="built_in">setopt</span> HIST_IGNORE_DUPS</div><div class="line"><span class="comment">#为历史纪录中的命令添加时间戳</span></div><div class="line"><span class="built_in">setopt</span> EXTENDED_HISTORY      </div><div class="line"> </div><div class="line"><span class="comment">#启用 cd 命令的历史纪录，cd -[TAB]进入历史路径</span></div><div class="line"><span class="built_in">setopt</span> AUTO_PUSHD</div><div class="line"><span class="comment">#相同的历史路径只保留一个</span></div><div class="line"><span class="built_in">setopt</span> PUSHD_IGNORE_DUPS</div><div class="line"> </div><div class="line"><span class="comment">#在命令前添加空格，不将此命令添加到纪录文件中</span></div><div class="line"><span class="comment">#setopt HIST_IGNORE_SPACE</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">#每个目录使用独立的历史纪录&#123;&#123;&#123;</span></div><div class="line"><span class="function"><span class="title">cd</span></span>() &#123;</div><div class="line"><span class="built_in">builtin</span> <span class="built_in">cd</span> <span class="string">"<span class="variable">$@</span>"</span>                             <span class="comment"># do actual cd</span></div><div class="line"><span class="built_in">fc</span> -W                                       <span class="comment"># write current history  file</span></div><div class="line"><span class="built_in">local</span> HISTDIR=<span class="string">"<span class="variable">$HOME</span>/.zsh_history<span class="variable">$PWD</span>"</span>      <span class="comment"># use nested folders for history</span></div><div class="line"><span class="keyword">if</span>  [ ! -d <span class="string">"<span class="variable">$HISTDIR</span>"</span> ] ; <span class="keyword">then</span>          <span class="comment"># create folder if needed</span></div><div class="line">mkdir -p <span class="string">"<span class="variable">$HISTDIR</span>"</span></div><div class="line"><span class="keyword">fi</span></div><div class="line"><span class="built_in">export</span> HISTFILE=<span class="string">"<span class="variable">$HISTDIR</span>/zhistory"</span>     <span class="comment"># set new history file</span></div><div class="line">touch <span class="variable">$HISTFILE</span></div><div class="line"><span class="built_in">local</span> ohistsize=<span class="variable">$HISTSIZE</span></div><div class="line">HISTSIZE=0                              <span class="comment"># Discard previous dir's history</span></div><div class="line">HISTSIZE=<span class="variable">$ohistsize</span>                     <span class="comment"># Prepare for new dir's history</span></div><div class="line"><span class="built_in">fc</span> -R                                       <span class="comment">#read from current histfile</span></div><div class="line">&#125;</div><div class="line">mkdir -p <span class="variable">$HOME</span>/.zsh_history<span class="variable">$PWD</span></div><div class="line"><span class="built_in">export</span> HISTFILE=<span class="string">"<span class="variable">$HOME</span>/.zsh_history<span class="variable">$PWD</span>/zhistory"</span></div><div class="line"> </div><div class="line"><span class="keyword">function</span> allhistory &#123; cat $(find <span class="variable">$HOME</span>/.zsh_history -name zhistory) &#125;</div><div class="line"><span class="keyword">function</span> convhistory &#123;</div><div class="line">sort <span class="variable">$1</span> | uniq |</div><div class="line">sed <span class="string">'s/^:\([ 0-9]*\):[0-9]*;\(.*\)/\1::::::\2/'</span> |</div><div class="line">awk -F<span class="string">"::::::"</span> <span class="string">'&#123; $1=strftime("%Y-%m-%d %T",$1) "|"; print &#125;'</span></div><div class="line">&#125;</div><div class="line"><span class="comment">#使用 histall 命令查看全部历史纪录</span></div><div class="line"><span class="keyword">function</span> histall &#123; convhistory =(allhistory) |</div><div class="line">sed <span class="string">'/^.\&#123;20\&#125; *cd/i\\'</span> &#125;</div><div class="line"><span class="comment">#使用 hist 查看当前目录历史纪录</span></div><div class="line"><span class="keyword">function</span> hist &#123; convhistory <span class="variable">$HISTFILE</span> &#125;</div><div class="line"> </div><div class="line"><span class="comment">#全部历史纪录 top50</span></div><div class="line"><span class="keyword">function</span> top50 &#123; allhistory | awk -F<span class="string">':[ 0-9]*:[0-9]*;'</span> <span class="string">'&#123; $1="" ; print &#125;'</span> | sed <span class="string">'s/ /\n/g'</span> | sed <span class="string">'/^$/d'</span> | sort | uniq -c | sort -nr | head -n 50 &#125;</div><div class="line"> </div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">#杂项 &#123;&#123;&#123;</span></div><div class="line"><span class="comment">#允许在交互模式中使用注释  例如：</span></div><div class="line"><span class="comment">#cmd #这是注释</span></div><div class="line"><span class="built_in">setopt</span> INTERACTIVE_COMMENTS      </div><div class="line"> </div><div class="line"><span class="comment">#启用自动 cd，输入目录名回车进入目录</span></div><div class="line"><span class="comment">#稍微有点混乱，不如 cd 补全实用</span></div><div class="line"><span class="built_in">setopt</span> AUTO_CD</div><div class="line"> </div><div class="line"><span class="comment">#扩展路径</span></div><div class="line"><span class="comment">#/v/c/p/p =&gt; /var/cache/pacman/pkg</span></div><div class="line"><span class="built_in">setopt</span> complete_in_word</div><div class="line"> </div><div class="line"><span class="comment">#禁用 core dumps</span></div><div class="line"><span class="built_in">limit</span> coredumpsize 0</div><div class="line"> </div><div class="line"><span class="comment">#Emacs风格 键绑定</span></div><div class="line"><span class="built_in">bindkey</span> -e</div><div class="line"><span class="comment">#bindkey -v</span></div><div class="line"><span class="comment">#设置 [DEL]键 为向后删除</span></div><div class="line"><span class="comment">#bindkey "\e[3~" delete-char</span></div><div class="line"> </div><div class="line"><span class="comment">#以下字符视为单词的一部分</span></div><div class="line">WORDCHARS=<span class="string">'*?_-[]~=&amp;;!#$%^()&#123;&#125;&lt;&gt;'</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">#自动补全功能 &#123;&#123;&#123;</span></div><div class="line"><span class="built_in">setopt</span> AUTO_LIST</div><div class="line"><span class="built_in">setopt</span> AUTO_MENU</div><div class="line"><span class="comment">#开启此选项，补全时会直接选中菜单项</span></div><div class="line"><span class="comment">#setopt MENU_COMPLETE</span></div><div class="line"> </div><div class="line"><span class="built_in">autoload</span> -U compinit</div><div class="line">compinit</div><div class="line"> </div><div class="line"><span class="comment">#自动补全缓存</span></div><div class="line"><span class="comment">#zstyle ':completion::complete:*' use-cache on</span></div><div class="line"><span class="comment">#zstyle ':completion::complete:*' cache-path .zcache</span></div><div class="line"><span class="comment">#zstyle ':completion:*:cd:*' ignore-parents parent pwd</span></div><div class="line"> </div><div class="line"><span class="comment">#自动补全选项</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> verbose yes</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> menu select</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:*:default'</span> force-list always</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> select-prompt <span class="string">'%SSelect:  lines: %L  matches: %M  [%p]'</span></div><div class="line"> </div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:match:*'</span> original only</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion::prefix-1:*'</span> completer _complete</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:predict:*'</span> completer _complete</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:incremental:*'</span> completer _complete _correct</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> completer _complete _prefix _correct _prefix _match _approximate</div><div class="line"> </div><div class="line"><span class="comment">#路径补全</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> expand <span class="string">'yes'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> squeeze-shlashes <span class="string">'yes'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion::complete:*'</span> <span class="string">'\\'</span></div><div class="line"> </div><div class="line"><span class="comment">#彩色补全菜单</span></div><div class="line"><span class="built_in">eval</span> $(dircolors -b)</div><div class="line"><span class="built_in">export</span> ZLSCOLORS=<span class="string">"<span class="variable">$&#123;LS_COLORS&#125;</span>"</span></div><div class="line"><span class="built_in">zmodload</span> zsh/complist</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> list-colors <span class="variable">$&#123;(s.:.)LS_COLORS&#125;</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:*:kill:*:processes'</span> list-colors <span class="string">'=(#b) #([0-9]#)*=0=01;31'</span></div><div class="line"> </div><div class="line"><span class="comment">#修正大小写</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> matcher-list <span class="string">''</span> <span class="string">'m:&#123;a-zA-Z&#125;=&#123;A-Za-z&#125;'</span></div><div class="line"><span class="comment">#错误校正</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> completer _complete _match _approximate</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:match:*'</span> original only</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:approximate:*'</span> max-errors 1 numeric</div><div class="line"> </div><div class="line"><span class="comment">#kill 命令补全</span></div><div class="line">compdef pkill=<span class="built_in">kill</span></div><div class="line">compdef pkill=killall</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:*:kill:*'</span> menu yes select</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:*:*:*:processes'</span> force-list always</div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:processes'</span> <span class="built_in">command</span> <span class="string">'ps -au$USER'</span></div><div class="line"> </div><div class="line"><span class="comment">#补全类型提示分组</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:matches'</span> group <span class="string">'yes'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*'</span> group-name <span class="string">''</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:options'</span> description <span class="string">'yes'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:options'</span> auto-description <span class="string">'%d'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:descriptions'</span> format $<span class="string">'\e[01;33m -- %d --\e[0m'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:messages'</span> format $<span class="string">'\e[01;35m -- %d --\e[0m'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:warnings'</span> format $<span class="string">'\e[01;31m -- No Matches Found --\e[0m'</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:corrections'</span> format $<span class="string">'\e[01;32m -- %d (errors: %e) --\e[0m'</span></div><div class="line"> </div><div class="line"><span class="comment"># cd ~ 补全顺序</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:-tilde-:*'</span> group-order <span class="string">'named-directories'</span> <span class="string">'path-directories'</span> <span class="string">'users'</span> <span class="string">'expand'</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">##行编辑高亮模式 &#123;&#123;&#123;</span></div><div class="line"><span class="comment"># Ctrl+@ 设置标记，标记和光标点之间为 region</span></div><div class="line">zle_highlight=(region:<span class="built_in">bg</span>=magenta <span class="comment">#选中区域</span></div><div class="line">special:bold      <span class="comment">#特殊字符</span></div><div class="line">isearch:underline)<span class="comment">#搜索时使用的关键字</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">##空行(光标在行首)补全 "cd " &#123;&#123;&#123;</span></div><div class="line">user-<span class="function"><span class="title">complete</span></span>()&#123;</div><div class="line"><span class="keyword">case</span> <span class="variable">$BUFFER</span> <span class="keyword">in</span></div><div class="line"><span class="string">""</span> )                       <span class="comment"># 空行填入 "cd "</span></div><div class="line">BUFFER=<span class="string">"cd "</span></div><div class="line"><span class="built_in">zle</span> end-of-line</div><div class="line"><span class="built_in">zle</span> expand-or-complete</div><div class="line">;;</div><div class="line"><span class="string">"cd --"</span> )                  <span class="comment"># "cd --" 替换为 "cd +"</span></div><div class="line">BUFFER=<span class="string">"cd +"</span></div><div class="line"><span class="built_in">zle</span> end-of-line</div><div class="line"><span class="built_in">zle</span> expand-or-complete</div><div class="line">;;</div><div class="line"><span class="string">"cd +-"</span> )                  <span class="comment"># "cd +-" 替换为 "cd -"</span></div><div class="line">BUFFER=<span class="string">"cd -"</span></div><div class="line"><span class="built_in">zle</span> end-of-line</div><div class="line"><span class="built_in">zle</span> expand-or-complete</div><div class="line">;;</div><div class="line">* )</div><div class="line"><span class="built_in">zle</span> expand-or-complete</div><div class="line">;;</div><div class="line"><span class="keyword">esac</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">zle</span> -N user-complete</div><div class="line"><span class="built_in">bindkey</span> <span class="string">"\t"</span> user-complete</div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">##在命令前插入 sudo &#123;&#123;&#123;</span></div><div class="line"><span class="comment">#定义功能</span></div><div class="line">sudo-command-<span class="function"><span class="title">line</span></span>() &#123;</div><div class="line">[[ -z <span class="variable">$BUFFER</span> ]] &amp;&amp; <span class="built_in">zle</span> up-history</div><div class="line">[[ <span class="variable">$BUFFER</span> != sudo\ * ]] &amp;&amp; BUFFER=<span class="string">"sudo <span class="variable">$BUFFER</span>"</span></div><div class="line"><span class="built_in">zle</span> end-of-line                 <span class="comment">#光标移动到行末</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">zle</span> -N sudo-command-line</div><div class="line"><span class="comment">#定义快捷键为： [Esc] [Esc]</span></div><div class="line"><span class="built_in">bindkey</span> <span class="string">"\e\e"</span> sudo-command-line</div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">#命令别名 &#123;&#123;&#123;</span></div><div class="line"><span class="comment">#alias cp='cp -i'</span></div><div class="line"><span class="comment">#alias mv='mv -i'</span></div><div class="line"><span class="comment">#alias rm='rm -i'</span></div><div class="line"><span class="comment">#alias ls='ls -F --color=auto'</span></div><div class="line"><span class="comment">#alias ll='ls -al'</span></div><div class="line"><span class="comment">#alias grep='grep --color=auto'</span></div><div class="line"><span class="comment">#alias la='ls -a'</span></div><div class="line"><span class="comment">#alias pacman='sudo pacman-color'</span></div><div class="line"><span class="comment">#alias p='sudo pacman-color'</span></div><div class="line"><span class="comment">#alias y='yaourt'</span></div><div class="line"><span class="comment">#alias h='htop'</span></div><div class="line"><span class="comment">#alias vim='sudo vim'</span></div><div class="line"> </div><div class="line"><span class="comment">#[Esc][h] man 当前命令时，显示简短说明</span></div><div class="line"><span class="built_in">alias</span> run-help &gt;&amp;/dev/null &amp;&amp; <span class="built_in">unalias</span> run-help</div><div class="line"><span class="built_in">autoload</span> run-help</div><div class="line"> </div><div class="line"><span class="comment">#历史命令 top10</span></div><div class="line"><span class="built_in">alias</span> top10=<span class="string">'print -l  $&#123;(o)history%% *&#125; | uniq -c | sort -nr | head -n 10'</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"></div><div class="line"> </div><div class="line"><span class="comment">##for Emacs &#123;&#123;&#123;</span></div><div class="line"><span class="comment">#在 Emacs终端 中使用 Zsh 的一些设置 不推荐在 Emacs 中使用它</span></div><div class="line"><span class="comment">#if [[ "$TERM" == "dumb" ]]; then</span></div><div class="line"><span class="comment">#setopt No_zle</span></div><div class="line"><span class="comment">#PROMPT='%n@%M %/</span></div><div class="line"><span class="comment">#&gt;&gt;'</span></div><div class="line"><span class="comment">#alias ls='ls -F'</span></div><div class="line"><span class="comment">#fi</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">#&#123;&#123;&#123;自定义补全</span></div><div class="line"><span class="comment">#补全 ping</span></div><div class="line"><span class="built_in">zstyle</span> <span class="string">':completion:*:ping:*'</span> hosts 192.168.1.&#123;1,50,51,100,101&#125; www.google.com</div><div class="line"> </div><div class="line"><span class="comment">#补全 ssh scp sftp 等</span></div><div class="line"><span class="comment">#zstyle -e ':completion::*:*:*:hosts' hosts 'reply=($&#123;=$&#123;$&#123;(f)"$(cat &#123;/etc/ssh_,~/.ssh/known_&#125;hosts(|2)(N) /dev/null)"&#125;%%[# ]*&#125;//,/ &#125;)'</span></div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">#&#123;&#123;&#123; F1 计算器</span></div><div class="line">arith-eval-<span class="function"><span class="title">echo</span></span>() &#123;</div><div class="line">LBUFFER=<span class="string">"<span class="variable">$&#123;LBUFFER&#125;</span>echo \$(( "</span></div><div class="line">RBUFFER=<span class="string">" ))<span class="variable">$RBUFFER</span>"</span></div><div class="line">&#125;</div><div class="line"><span class="built_in">zle</span> -N arith-eval-echo</div><div class="line"><span class="built_in">bindkey</span> <span class="string">"^[[11~"</span> arith-eval-echo</div><div class="line"><span class="comment">#&#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="comment">####&#123;&#123;&#123;</span></div><div class="line"><span class="keyword">function</span> timeconv &#123; date -d @<span class="variable">$1</span> +<span class="string">"%Y-%m-%d %T"</span> &#125;</div><div class="line"> </div><div class="line"><span class="comment"># &#125;&#125;&#125;</span></div><div class="line"> </div><div class="line"><span class="built_in">zmodload</span> zsh/mathfunc</div><div class="line"><span class="built_in">autoload</span> -U zsh-mime-setup</div><div class="line">zsh-mime-setup</div><div class="line"><span class="built_in">setopt</span> EXTENDED_GLOB</div><div class="line"><span class="comment">#autoload -U promptinit</span></div><div class="line"><span class="comment">#promptinit</span></div><div class="line"><span class="comment">#prompt redhat</span></div><div class="line"> </div><div class="line"><span class="built_in">setopt</span> correctall</div><div class="line"><span class="built_in">autoload</span> compinstall</div><div class="line"> </div><div class="line"><span class="comment">#漂亮又实用的命令高亮界面</span></div><div class="line"><span class="built_in">setopt</span> extended_glob</div><div class="line"> TOKENS_FOLLOWED_BY_COMMANDS=(<span class="string">'|'</span> <span class="string">'||'</span> <span class="string">';'</span> <span class="string">'&amp;'</span> <span class="string">'&amp;&amp;'</span> <span class="string">'sudo'</span> <span class="string">'do'</span> <span class="string">'time'</span> <span class="string">'strace'</span>)</div><div class="line"> </div><div class="line"> recolor-<span class="function"><span class="title">cmd</span></span>() &#123;</div><div class="line">     region_highlight=()</div><div class="line">     colorize=<span class="literal">true</span></div><div class="line">     start_pos=0</div><div class="line">     <span class="keyword">for</span> arg <span class="keyword">in</span> <span class="variable">$&#123;(z)BUFFER&#125;</span>; <span class="keyword">do</span></div><div class="line">         ((start_pos+=<span class="variable">$&#123;#BUFFER[$start_pos+1,-1]&#125;</span>-<span class="variable">$&#123;#$&#123;BUFFER[$start_pos+1,-1]## #&#125;</span>&#125;))</div><div class="line">         ((end_pos=<span class="variable">$start_pos</span>+<span class="variable">$&#123;#arg&#125;</span>))</div><div class="line">         <span class="keyword">if</span> <span class="variable">$colorize</span>; <span class="keyword">then</span></div><div class="line">             colorize=<span class="literal">false</span></div><div class="line">             res=$(LC_ALL=C <span class="built_in">builtin</span> <span class="built_in">type</span> <span class="variable">$arg</span> 2&gt;/dev/null)</div><div class="line">             <span class="keyword">case</span> <span class="variable">$res</span> <span class="keyword">in</span></div><div class="line">                 *<span class="string">'reserved word'</span>*)   style=<span class="string">"fg=magenta,bold"</span>;;</div><div class="line">                 *<span class="string">'alias for'</span>*)       style=<span class="string">"fg=cyan,bold"</span>;;</div><div class="line">                 *<span class="string">'shell builtin'</span>*)   style=<span class="string">"fg=yellow,bold"</span>;;</div><div class="line">                 *<span class="string">'shell function'</span>*)  style=<span class="string">'fg=green,bold'</span>;;</div><div class="line">                 *<span class="string">"<span class="variable">$arg</span> is"</span>*)</div><div class="line">                     [[ <span class="variable">$arg</span> = <span class="string">'sudo'</span> ]] &amp;&amp; style=<span class="string">"fg=red,bold"</span> || style=<span class="string">"fg=blue,bold"</span>;;</div><div class="line">                 *)                   style=<span class="string">'none,bold'</span>;;</div><div class="line">             <span class="keyword">esac</span></div><div class="line">             region_highlight+=(<span class="string">"<span class="variable">$start_pos</span> <span class="variable">$end_pos</span> <span class="variable">$style</span>"</span>)</div><div class="line">         <span class="keyword">fi</span></div><div class="line">         [[ <span class="variable">$&#123;$&#123;TOKENS_FOLLOWED_BY_COMMANDS[(r)$&#123;arg//|/\|&#125;</span>]&#125;:+yes&#125; = <span class="string">'yes'</span> ]] &amp;&amp; colorize=<span class="literal">true</span></div><div class="line">         start_pos=<span class="variable">$end_pos</span></div><div class="line">     <span class="keyword">done</span></div><div class="line"> &#125;</div><div class="line">check-cmd-self-<span class="function"><span class="title">insert</span></span>() &#123; <span class="built_in">zle</span> .self-insert &amp;&amp; recolor-cmd &#125;</div><div class="line"> check-cmd-backward-delete-<span class="function"><span class="title">char</span></span>() &#123; <span class="built_in">zle</span> .backward-delete-char &amp;&amp; recolor-cmd &#125;</div><div class="line"> </div><div class="line"> <span class="built_in">zle</span> -N self-insert check-cmd-self-insert</div><div class="line"> <span class="built_in">zle</span> -N backward-delete-char check-cmd-backward-delete-char</div></pre></td></tr></table></figure>
 
- &lt;!--more--&gt; 
-
-#命令提示符
-RPROMPT=$(echo &quot;$RED%D %T$FINISH&quot;)
-PROMPT=$(echo &quot;$CYAN%n@$YELLOW%M:$GREEN%/$_YELLOW&gt;$FINISH &quot;)
-
-#PROMPT=$(echo &quot;$BLUE%M$GREEN%/
-#$CYAN%n@$BLUE%M:$GREEN%/$_YELLOW&gt;&gt;&gt;$FINISH &quot;)
-#标题栏、任务栏样式{{{
-	case $TERM in (*xterm*|*rxvt*|(dt|k|E)term)
-	precmd () { print -Pn "\e]0;%n@%M//%/\a" }
-	preexec () { print -Pn "\e]0;%n@%M//%/\ $1\a" }
-	;;
-	esac
-	#}}}
-
-#编辑器
-export EDITOR=vim
-#输入法
-export XMODIFIERS=&quot;@im=ibus&quot;
-export QT_MODULE=ibus
-export GTK_MODULE=ibus
-#关于历史纪录的配置 {{{
-	#历史纪录条目数量
-	export HISTSIZE=10000
-	#注销后保存的历史纪录条目数量
-	export SAVEHIST=10000
-	#历史纪录文件
-    export HISTFILE=~/.zhistory
-	#以附加的方式写入历史纪录
-	setopt INC_APPEND_HISTORY
-	#如果连续输入的命令相同，历史纪录中只保留一个
-	setopt HIST_IGNORE_DUPS
-	#为历史纪录中的命令添加时间戳
-	setopt EXTENDED_HISTORY      
-	 
-	#启用 cd 命令的历史纪录，cd -[TAB]进入历史路径
-	setopt AUTO_PUSHD
-	#相同的历史路径只保留一个
-	setopt PUSHD_IGNORE_DUPS
-	 
-	#在命令前添加空格，不将此命令添加到纪录文件中
-	#setopt HIST_IGNORE_SPACE
-	#}}}
-
-#每个目录使用独立的历史纪录{{{
-	cd() {
-	builtin cd "$@"                             # do actual cd
-	fc -W                                       # write current history  file
-	local HISTDIR="$HOME/.zsh_history$PWD"      # use nested folders for history
-	if  [ ! -d "$HISTDIR" ] ; then          # create folder if needed
-	mkdir -p "$HISTDIR"
-	fi
-	export HISTFILE="$HISTDIR/zhistory"     # set new history file
-	touch $HISTFILE
-	local ohistsize=$HISTSIZE
-	HISTSIZE=0                              # Discard previous dir's history
-	HISTSIZE=$ohistsize                     # Prepare for new dir's history
-	fc -R                                       #read from current histfile
-	}
-	mkdir -p $HOME/.zsh_history$PWD
-	export HISTFILE="$HOME/.zsh_history$PWD/zhistory"
-	 
-	function allhistory { cat $(find $HOME/.zsh_history -name zhistory) }
-	function convhistory {
-	sort $1 | uniq |
-	sed 's/^:\([ 0-9]*\):[0-9]*;\(.*\)/\1::::::\2/' |
-	awk -F"::::::" '{ $1=strftime("%Y-%m-%d %T",$1) "|"; print }'
-	}
-	#使用 histall 命令查看全部历史纪录
-	function histall { convhistory =(allhistory) |
-	sed '/^.\{20\} *cd/i\\' }
-	#使用 hist 查看当前目录历史纪录
-	function hist { convhistory $HISTFILE }
-	 
-	#全部历史纪录 top50
-	function top50 { allhistory | awk -F':[ 0-9]*:[0-9]*;' '{ $1="" ; print }' | sed 's/ /\n/g' | sed '/^$/d' | sort | uniq -c | sort -nr | head -n 50 }
-	 
-	#}}}
-
-#杂项 {{{
-	#允许在交互模式中使用注释  例如：
-	#cmd #这是注释
-	setopt INTERACTIVE_COMMENTS      
-	 
-	#启用自动 cd，输入目录名回车进入目录
-	#稍微有点混乱，不如 cd 补全实用
-	setopt AUTO_CD
-	 
-	#扩展路径
-	#/v/c/p/p => /var/cache/pacman/pkg
-	setopt complete_in_word
-	 
-	#禁用 core dumps
-	limit coredumpsize 0
-	 
-	#Emacs风格 键绑定
-	bindkey -e
-	#bindkey -v
-	#设置 [DEL]键 为向后删除
-	#bindkey "\e[3~" delete-char
-	 
-	#以下字符视为单词的一部分
-	WORDCHARS='*?_-[]~=&;!#$%^(){}<>'
-	#}}}
-
-#自动补全功能 {{{
-	setopt AUTO_LIST
-	setopt AUTO_MENU
-	#开启此选项，补全时会直接选中菜单项
-	#setopt MENU_COMPLETE
-	 
-	autoload -U compinit
-	compinit
-	 
-	#自动补全缓存
-	#zstyle ':completion::complete:*' use-cache on
-	#zstyle ':completion::complete:*' cache-path .zcache
-	#zstyle ':completion:*:cd:*' ignore-parents parent pwd
-	 
-	#自动补全选项
-	zstyle ':completion:*' verbose yes
-	zstyle ':completion:*' menu select
-	zstyle ':completion:*:*:default' force-list always
-	zstyle ':completion:*' select-prompt '%SSelect:  lines: %L  matches: %M  [%p]'
-	 
-	zstyle ':completion:*:match:*' original only
-	zstyle ':completion::prefix-1:*' completer _complete
-	zstyle ':completion:predict:*' completer _complete
-	zstyle ':completion:incremental:*' completer _complete _correct
-	zstyle ':completion:*' completer _complete _prefix _correct _prefix _match _approximate
-	 
-	#路径补全
-	zstyle ':completion:*' expand 'yes'
-	zstyle ':completion:*' squeeze-shlashes 'yes'
-	zstyle ':completion::complete:*' '\\'
-	 
-	#彩色补全菜单
-	eval $(dircolors -b)
-	export ZLSCOLORS="${LS_COLORS}"
-	zmodload zsh/complist
-	zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-	zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-	 
-	#修正大小写
-	zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
-	#错误校正
-	zstyle ':completion:*' completer _complete _match _approximate
-	zstyle ':completion:*:match:*' original only
-	zstyle ':completion:*:approximate:*' max-errors 1 numeric
-	 
-	#kill 命令补全
-	compdef pkill=kill
-	compdef pkill=killall
-	zstyle ':completion:*:*:kill:*' menu yes select
-	zstyle ':completion:*:*:*:*:processes' force-list always
-	zstyle ':completion:*:processes' command 'ps -au$USER'
-	 
-	#补全类型提示分组
-	zstyle ':completion:*:matches' group 'yes'
-	zstyle ':completion:*' group-name ''
-	zstyle ':completion:*:options' description 'yes'
-	zstyle ':completion:*:options' auto-description '%d'
-	zstyle ':completion:*:descriptions' format $'\e[01;33m -- %d --\e[0m'
-	zstyle ':completion:*:messages' format $'\e[01;35m -- %d --\e[0m'
-	zstyle ':completion:*:warnings' format $'\e[01;31m -- No Matches Found --\e[0m'
-	zstyle ':completion:*:corrections' format $'\e[01;32m -- %d (errors: %e) --\e[0m'
-	 
-	# cd ~ 补全顺序
-	zstyle ':completion:*:-tilde-:*' group-order 'named-directories' 'path-directories' 'users' 'expand'
-	#}}}
-
-##行编辑高亮模式 {{{
-	# Ctrl+@ 设置标记，标记和光标点之间为 region
-	zle_highlight=(region:bg=magenta #选中区域
-	special:bold      #特殊字符
-	isearch:underline)#搜索时使用的关键字
-	#}}}
-
-##空行(光标在行首)补全 &quot;cd &quot; {{{
-	user-complete(){
-	case $BUFFER in
-	"" )                       # 空行填入 "cd "
-	BUFFER="cd "
-	zle end-of-line
-	zle expand-or-complete
-	;;
-	"cd --" )                  # "cd --" 替换为 "cd +"
-	BUFFER="cd +"
-	zle end-of-line
-	zle expand-or-complete
-	;;
-	"cd +-" )                  # "cd +-" 替换为 "cd -"
-	BUFFER="cd -"
-	zle end-of-line
-	zle expand-or-complete
-	;;
-	* )
-	zle expand-or-complete
-	;;
-	esac
-	}
-	zle -N user-complete
-	bindkey "\t" user-complete
-	#}}}
-
-##在命令前插入 sudo {{{
-	#定义功能
-	sudo-command-line() {
-	[[ -z $BUFFER ]] && zle up-history
-	[[ $BUFFER != sudo\ * ]] && BUFFER="sudo $BUFFER"
-	zle end-of-line                 #光标移动到行末
-	}
-	zle -N sudo-command-line
-	#定义快捷键为： [Esc] [Esc]
-	bindkey "\e\e" sudo-command-line
-	#}}}
-
-#命令别名 {{{
-	#alias cp='cp -i'
-	#alias mv='mv -i'
-	#alias rm='rm -i'
-	#alias ls='ls -F --color=auto'
-	#alias ll='ls -al'
-	#alias grep='grep --color=auto'
-	#alias la='ls -a'
-	#alias pacman='sudo pacman-color'
-	#alias p='sudo pacman-color'
-	#alias y='yaourt'
-	#alias h='htop'
-	#alias vim='sudo vim'
-	 
-	#[Esc][h] man 当前命令时，显示简短说明
-	alias run-help >&/dev/null && unalias run-help
-	autoload run-help
-	 
-	#历史命令 top10
-	alias top10='print -l  ${(o)history%% *} | uniq -c | sort -nr | head -n 10'
-	#}}}
-
-
-##for Emacs {{{
-	#在 Emacs终端 中使用 Zsh 的一些设置 不推荐在 Emacs 中使用它
-	#if [[ "$TERM" == "dumb" ]]; then
-	#setopt No_zle
-	#PROMPT='%n@%M %/
-	#>>'
-	#alias ls='ls -F'
-	#fi
-	#}}}
-
-#{{{自定义补全
-	#补全 ping
-	zstyle ':completion:*:ping:*' hosts 192.168.1.{1,50,51,100,101} www.google.com
-	 
-	#补全 ssh scp sftp 等
-	#zstyle -e ':completion::*:*:*:hosts' hosts 'reply=(${=${${(f)"$(cat {/etc/ssh_,~/.ssh/known_}hosts(|2)(N) /dev/null)"}%%[# ]*}//,/ })'
-	#}}}
-
-#{{{ F1 计算器
-	arith-eval-echo() {
-	LBUFFER="${LBUFFER}echo \$(( "
-	RBUFFER=" ))$RBUFFER"
-	}
-	zle -N arith-eval-echo
-	bindkey "^[[11~" arith-eval-echo
-	#}}}
-
-####{{{
-	function timeconv { date -d @$1 +"%Y-%m-%d %T" }
-	 
-	# }}}
-
-zmodload zsh/mathfunc
-autoload -U zsh-mime-setup
-zsh-mime-setup
-setopt EXTENDED_GLOB
-#autoload -U promptinit
-#promptinit
-#prompt redhat
-
-setopt correctall
-autoload compinstall
-
-#漂亮又实用的命令高亮界面
-setopt extended_glob
- TOKENS_FOLLOWED_BY_COMMANDS=(&apos;|&apos; &apos;||&apos; &apos;;&apos; &apos;&amp;&apos; &apos;&amp;&amp;&apos; &apos;sudo&apos; &apos;do&apos; &apos;time&apos; &apos;strace&apos;)
-
- recolor-cmd() {
-     region_highlight=()
-     colorize=true
-     start_pos=0
-     for arg in ${(z)BUFFER}; do
-         ((start_pos+=$}))
-         ((end_pos=$start_pos+${#arg}))
-         if $colorize; then
-             colorize=false
-             res=$(LC_ALL=C builtin type $arg 2&gt;/dev/null)
-             case $res in
-                 *&apos;reserved word&apos;*)   style=&quot;fg=magenta,bold&quot;;;
-                 *&apos;alias for&apos;*)       style=&quot;fg=cyan,bold&quot;;;
-                 *&apos;shell builtin&apos;*)   style=&quot;fg=yellow,bold&quot;;;
-                 *&apos;shell function&apos;*)  style=&apos;fg=green,bold&apos;;;
-                 *&quot;$arg is&quot;*)
-                     [[ $arg = &apos;sudo&apos; ]] &amp;&amp; style=&quot;fg=red,bold&quot; || style=&quot;fg=blue,bold&quot;;;
-                 *)                   style=&apos;none,bold&apos;;;
-             esac
-             region_highlight+=(&quot;$start_pos $end_pos $style&quot;)
-         fi
-         [[ ${${TOKENS_FOLLOWED_BY_COMMANDS[(r)${arg//|/\|}]}:+yes} = &apos;yes&apos; ]] &amp;&amp; colorize=true
-         start_pos=$end_pos
-     done
- }
-check-cmd-self-insert() { zle .self-insert &amp;&amp; recolor-cmd }
- check-cmd-backward-delete-char() { zle .backward-delete-char &amp;&amp; recolor-cmd }
-
- zle -N self-insert check-cmd-self-insert
- zle -N backward-delete-char check-cmd-backward-delete-char
-</code></pre>
       
 
       
@@ -534,7 +207,7 @@ check-cmd-self-insert() { zle .self-insert &amp;&amp; recolor-cmd }
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">---shell ---zsh</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">-shell -zsh</a>
         		</li>
       		
 		</ul>
@@ -739,6 +412,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Xcode</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">命令行</a>
               </li>
              
@@ -747,11 +424,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Xcode</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">---shell ---zsh</a>
+                <a href="javascript:void(0)" class="js-tag color2">-shell -zsh</a>
               </li>
             
             <div class="clearfix"></div>
